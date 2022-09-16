@@ -1,0 +1,108 @@
+version: '2'
+services:
+    plex:
+        image: linuxserver/plex
+        container_name: plex
+        volumes:
+            - #Path/to/Config:/config
+            - #Path/to/movies:/data/movies
+            - #Path/to/tvshows:/data/tvshows
+            - #OPT => Path/to/Anime:/data/anime
+            - #Path/to/transcode:/data/transcode
+        network_mode: host
+        restart: always
+        environment:
+            - VERSION=docker
+            - TZ=Europe/Berlin
+    sonarr:
+        image: linuxserver/sonarr
+        container_name: sonarr
+        depends_on:
+            - qbittorrent
+            - prowlarr
+        volumes:
+            - #Path/to/config:/config
+            - #Path/to/tvshows:/tv
+            - #OPT => Path/to/Anime:/anime
+            - /media/ssd:/data
+        environment:
+            - TZ=Europe/Berlin
+        ports:
+            - 8989:8989
+        restart: unless-stopped 
+    radarr:
+        image: linuxserver/radarr
+        container_name: radarr
+        depends_on:
+            - qbittorrent
+            - prowlarr
+        volumes:
+            - #Path/To/Config:/config
+            - #Path/to/movies:/movies
+            - /media/ssd:/data
+        environment:
+            - TZ=Europe/Berlin
+        ports:
+            - 7878:7878
+        restart: unless-stopped 
+    flaresolverr:
+      image: ghcr.io/flaresolverr/flaresolverr:latest
+      container_name: flaresolverr
+      environment:
+        - LOG_LEVEL=${LOG_LEVEL:-info}
+        - LOG_HTML=${LOG_HTML:-false}
+        - CAPTCHA_SOLVER=${CAPTCHA_SOLVER:-none}
+        - TZ=Europe/Berlin
+      ports:
+        - "8191:8191"
+      restart: unless-stopped 
+    prowlarr:
+      image: lscr.io/linuxserver/prowlarr:develop
+      container_name: prowlarr
+      depends_on:
+        - flaresolverr
+      environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=Europe/Berlin
+      volumes:
+        - #Path/to/Config:/config
+      ports:
+        - 9696:9696
+      restart: unless-stopped
+    qbittorrent:
+      image: lscr.io/linuxserver/qbittorrent:latest
+      container_name: qbittorrent
+      environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=Europe/Berlin
+        - WEBUI_PORT=8080
+      volumes:
+        - #Path/to/Config:/config
+        - /media/ssd:/data
+      ports:
+        - 8080:8080
+        - 6881:6881
+        - 6881:6881/udp
+      restart: unless-stopped
+    pihole:
+      container_name: pihole
+      image: pihole/pihole:latest
+      # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+      ports:
+        - "53:53/tcp"
+        - "53:53/udp"
+        #- "67:67/udp" Only required if you are using Pi-hole as your DHCP server
+        - "80:80/tcp"
+      environment:
+        TZ: 'Europe/Berlin'
+        WEBPASSWORD: WeirdPihole963
+      # Volumes store your data between container upgrades
+      volumes:
+        - #Path/To/config:/etc/pihole'
+        - './etc-dnsmasq.d:/etc/dnsmasq.d'    
+      #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+      cap_add:
+        - NET_ADMIN # Recommended but not required (DHCP needs NET_ADMIN)      
+      restart: unless-stopped
