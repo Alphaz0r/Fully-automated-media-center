@@ -1,7 +1,3 @@
-# Plex-qBit-Sonarr-Radarr-Prowlarr-Pihole-Flaresolverr
-docker-compose with these services installed. You just need to setup each services. Any suggestions much appreciated !
-
-
 # What can I do with this ?
 
 Apart of pihole, each of these services is a part for a completely automated media center. 
