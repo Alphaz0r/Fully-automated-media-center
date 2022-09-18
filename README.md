@@ -21,3 +21,26 @@ https://radarr.video/
 https://github.com/Prowlarr/Prowlarr
 ## qBittorrent
 https://www.qbittorrent.org/
+
+
+#Pre-requisites
+
+Docker and docker-compose
+
+# Setup
+
+These lines must be modified in order for everything to work correctly :
+
+- line `7->11`
+
+- line `24->26`
+
+- line `40->42`
+
+- line `69`
+
+- line `82-83`
+
+- line `7->11`
+
+- line `103 - 105`
