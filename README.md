@@ -23,8 +23,6 @@ https://github.com/Prowlarr/Prowlarr
 https://www.qbittorrent.org/
 
 
-
-
 #Pre-requisites
 
 
