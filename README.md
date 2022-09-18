@@ -26,7 +26,7 @@ https://www.qbittorrent.org/
 #Pre-requisites
 
 
-Docker and docker-compose
+Docker (and docker-compose)
 
 
 
