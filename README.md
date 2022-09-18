@@ -29,7 +29,7 @@ Docker and docker-compose
 
 # Setup
 
-These lines must be modified in order for everything to work correctly :
+These lines must be modified in order for everything to work correctly, it's mainly path to directories where Docker will save config files, tv shows, movies, ... :
 
 - line `7->11`
 
