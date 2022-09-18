@@ -16,8 +16,14 @@ If you don't need pihole, that's not a problem, you can delete line `89->108`.
 
 # Services
 ## Pihole
+https://docs.pi-hole.net/
 ## Plex
+https://www.plex.tv/
 ## Sonarr
+https://sonarr.tv/
 ## Radarr
+https://radarr.video/
 ## Prowlarr
+https://github.com/Prowlarr/Prowlarr
 ## qBittorrent
+https://www.qbittorrent.org/
