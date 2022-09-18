@@ -23,9 +23,14 @@ https://github.com/Prowlarr/Prowlarr
 https://www.qbittorrent.org/
 
 
+
+
 #Pre-requisites
 
+
 Docker and docker-compose
+
+
 
 # Setup
 
