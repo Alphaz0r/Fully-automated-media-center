@@ -97,7 +97,7 @@ services:
         - "80:80/tcp"
       environment:
         TZ: 'Europe/Berlin'
-        WEBPASSWORD: WeirdPihole963
+        WEBPASSWORD: #SetPasswordHere
       # Volumes store your data between container upgrades
       volumes:
         - #Path/To/config:/etc/pihole'
