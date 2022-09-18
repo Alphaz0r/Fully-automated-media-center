@@ -6,7 +6,7 @@ docker-compose with these services installed. You just need to setup each servic
 
 Apart of pihole, each of these services is a part for a completely automated media center. 
 
-In theory, you just have to choose your favourite serie and the media center will download, process, rename, sort and make it ready to go !
+In theory, when all is set up, you just have to choose your favourite serie and the media center will download, process, rename, sort and make it ready to go !
 
 > You have to modify `docker-compose.yml` with PATH to locate your files.
 
