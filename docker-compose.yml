@@ -24,7 +24,7 @@ services:
             - #Path/to/config:/config
             - #Path/to/tvshows:/tv
             - #OPT => Path/to/Anime:/anime
-            - /media/ssd:/data
+            - #Path/to/torrents:/data
         environment:
             - TZ=Europe/Berlin
         ports:
@@ -39,7 +39,7 @@ services:
         volumes:
             - #Path/To/Config:/config
             - #Path/to/movies:/movies
-            - /media/ssd:/data
+            - #Path/to/torrents:/data
         environment:
             - TZ=Europe/Berlin
         ports:
@@ -80,7 +80,7 @@ services:
         - WEBUI_PORT=8080
       volumes:
         - #Path/to/Config:/config
-        - /media/ssd:/data
+        - #Path/to/torrents:/data
       ports:
         - 8080:8080
         - 6881:6881
