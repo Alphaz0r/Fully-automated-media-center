@@ -4,7 +4,7 @@ Apart of pihole, each of these services is a part for a completely automated med
 
 > Tested on RPi model 4B, works flawlessly. :)
 
-In theory, when all is set up, you just have to choose your favourite serie and the media center will download, process, rename, sort and make it ready for you to watch it !
+In theory, when all is set up, you just have to choose your favourite serie and the media center will download, process, rename, sort and make it ready for you to watch it ! (Disclaimer : I'm not responsible if there are problems... :) )
 
 > You have to modify `docker-compose.yml` with PATH to locate your files. See [here](#Setup) for more informations.
 
