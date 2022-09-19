@@ -20,7 +20,7 @@ WEBui available on port `32400`, you might need to search for `/web` page depend
 ## Sonarr
 https://sonarr.tv/
 
-`8989`
+WEBui available on port `8989`
 ## Radarr
 https://radarr.video/
 
