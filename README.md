@@ -50,6 +50,8 @@ https://www.docker.com/
 
 These lines must be modified in order for everything to work correctly, it's mainly path to directories where Docker will save config files, tv shows, movies, ... :
 
+> With Docker, PATH works like this : `HOST_PATH` : `CONTAINER_PATH`
+
 - line `7->11`
 
 - line `24->26`
