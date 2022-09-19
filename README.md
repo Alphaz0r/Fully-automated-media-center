@@ -30,15 +30,14 @@ https://github.com/Prowlarr/Prowlarr
 
 WEBui available on port `9696`
 ## qBittorrent
-https://www.qbittorrent.org/
-
 WEBui available on port `8080`
 
-##Flaresolverr
+
+## Flaresolverr
 https://github.com/FlareSolverr/FlareSolverr
 
 API availabe on port `8191`
-#Pre-requisites
+# Pre-requisites
 
 
 Docker (and docker-compose)
