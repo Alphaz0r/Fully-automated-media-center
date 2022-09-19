@@ -63,3 +63,11 @@ These lines must be modified in order for everything to work correctly, it's mai
 - line `103 - 105`
 
 > For Sonarr, Radarr and qBittorrent, path to torrents must be the same !
+
+After that, you'll need to browse every WEBui to configure each service and establish communication between containers. 
+
+## Tips
+
+When a service asks for a URL (example : `sonarr` asking for indexer, in this case `prowlarr`) just put the container name instead of the ip adress. It should recognize the container immediatly.
+
+Example : `http://prowlarr:9696` or `http://qbittorrent:8080`
