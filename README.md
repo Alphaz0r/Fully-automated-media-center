@@ -33,6 +33,11 @@ WEBui available on port `9696`
 https://www.qbittorrent.org/
 
 WEBui available on port `8080`
+
+##Flaresolverr
+https://github.com/FlareSolverr/FlareSolverr
+
+API availabe on port `8191`
 #Pre-requisites
 
 
