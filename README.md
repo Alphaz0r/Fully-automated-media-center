@@ -58,8 +58,6 @@ These lines must be modified in order for everything to work correctly, it's mai
 
 - line `82-83`
 
-- line `7->11`
-
 - line `103 - 105`
 
 > For Sonarr, Radarr and qBittorrent, path to torrents must be the same !
