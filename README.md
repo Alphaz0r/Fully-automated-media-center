@@ -11,18 +11,28 @@ If you don't need pihole, that's not a problem, you can delete line `89->108`.
 # Services
 ## Pihole
 https://docs.pi-hole.net/
+
+WEBui available on port `80`
 ## Plex
 https://www.plex.tv/
+
+WEBui available on port `32400`, you might need to search for `/web` page depending on your browser.
 ## Sonarr
 https://sonarr.tv/
+
+`8989`
 ## Radarr
 https://radarr.video/
+
+WEBui available on port `7878`
 ## Prowlarr
 https://github.com/Prowlarr/Prowlarr
+
+WEBui available on port `9696`
 ## qBittorrent
 https://www.qbittorrent.org/
 
-
+WEBui available on port `8080`
 #Pre-requisites
 
 
