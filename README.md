@@ -4,7 +4,7 @@ Apart of pihole, each of these services is a part for a completely automated med
 
 In theory, when all is set up, you just have to choose your favourite serie and the media center will download, process, rename, sort and make it ready for you to watch it !
 
-> You have to modify `docker-compose.yml` with PATH to locate your files.
+> You have to modify `docker-compose.yml` with PATH to locate your files. See {https://github.com/Alphaz0r/Fully-automated-media-center#setup}{here} for more informations.
 
 If you don't need pihole, that's not a problem, you can delete line `89->108`.
 
