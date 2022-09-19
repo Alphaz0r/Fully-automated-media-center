@@ -4,10 +4,10 @@ services:
         image: linuxserver/plex
         container_name: plex
         volumes:
-            - #Path/to/Config:/config
+            - ./plex/config:/config
             - #Path/to/movies:/data/movies
             - #Path/to/tvshows:/data/tvshows
-            - #OPT => Path/to/Anime:/data/anime
+            - #Path/to/anime:/data/anime
             - #Path/to/transcode:/data/transcode
         network_mode: host
         restart: always
@@ -21,10 +21,10 @@ services:
             - qbittorrent
             - prowlarr
         volumes:
-            - #Path/to/config:/config
-            - #Path/to/tvshows:/tv
-            - #OPT => Path/to/Anime:/anime
-            - #Path/to/torrents:/data
+            - ./sonarr/config:/config
+            - #Path/to/tvshows:/data/tvshows
+            - #Path/to/anime:/data/anime
+            - #Path/to/torrents:/data/torrents
         environment:
             - TZ=Europe/Berlin
         ports:
@@ -37,9 +37,9 @@ services:
             - qbittorrent
             - prowlarr
         volumes:
-            - #Path/To/Config:/config
-            - #Path/to/movies:/movies
-            - #Path/to/torrents:/data
+            - ./radarr/config:/config
+            - #Path/to/movies:/data/movies
+            - #Path/to/torrents:/data/torrents
         environment:
             - TZ=Europe/Berlin
         ports:
@@ -66,7 +66,7 @@ services:
         - PGID=1000
         - TZ=Europe/Berlin
       volumes:
-        - #Path/to/Config:/config
+        - ./prowlarr/data:/config
       ports:
         - 9696:9696
       restart: unless-stopped
@@ -79,8 +79,8 @@ services:
         - TZ=Europe/Berlin
         - WEBUI_PORT=8080
       volumes:
-        - #Path/to/Config:/config
-        - #Path/to/torrents:/data
+        - ./qbittorrent/config:/config
+        - #Path/to/torrents:/data/torrents
       ports:
         - 8080:8080
         - 6881:6881
