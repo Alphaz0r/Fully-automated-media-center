@@ -16,7 +16,7 @@ WEBui available on port `80`
 ## Plex
 https://www.plex.tv/
 
-WEBui available on port `32400`, you might need to search for `/web` page depending on your browser.
+WEBui available on port `32400`, you might need to search for `http://$IP:32400/web` URL depending on your browser.
 ## Sonarr
 https://sonarr.tv/
 
