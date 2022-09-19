@@ -73,3 +73,6 @@ After that, you'll need to browse every WEBui to configure each service and esta
 When a service asks for a URL (example : `sonarr` asking for indexer, in this case `prowlarr`) just put the container name instead of the ip adress. It should recognize the container immediatly.
 
 Example : `http://prowlarr:9696` or `http://qbittorrent:8080`
+
+![image](https://user-images.githubusercontent.com/17253480/191007853-e163acf2-af73-4d91-bc4f-8ae8995fc602.png)
+
