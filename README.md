@@ -10,6 +10,15 @@ In theory, when all is set up, you just have to choose your favourite serie and 
 
 If you don't need pihole, that's not a problem, you can delete line `89->108`.
 
+# Pre-requisites
+
+
+Docker (and docker-compose)
+
+https://www.docker.com/
+
+
+
 # Services
 ## Pihole
 https://docs.pi-hole.net/
@@ -39,12 +48,7 @@ WEBui available on port `8080`
 https://github.com/FlareSolverr/FlareSolverr
 
 API availabe on port `8191`
-# Pre-requisites
 
-
-Docker (and docker-compose)
-
-https://www.docker.com/
 
 # Setup
 
