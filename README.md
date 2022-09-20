@@ -20,7 +20,7 @@ https://www.docker.com/
 
 
 # Services
-## Pihole
+## Pihole (optionnal)
 https://docs.pi-hole.net/
 
 WEBui available on port `80`
