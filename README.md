@@ -1,3 +1,7 @@
+# Todo
+
+Create networks for internal connections instead of publishing every ports
+
 # What can I do with this ?
 
 Apart of pihole, each of these services is a part for a completely automated media center. 
