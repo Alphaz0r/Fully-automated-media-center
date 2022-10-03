@@ -27,6 +27,8 @@ https://www.docker.com/
 ## Pihole (optionnal)
 https://docs.pi-hole.net/
 
+If you don't need pihole, that's not a problem, you can delete line `89->108`.
+
 WEBui available on port `80`
 ## Plex
 https://www.plex.tv/
