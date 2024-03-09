@@ -106,3 +106,13 @@ services:
       cap_add:
         - NET_ADMIN # Recommended but not required (DHCP needs NET_ADMIN)      
       restart: unless-stopped
+    joal:
+      image: anthonyraymond/joal:latest
+      container_name: joal
+      restart: unless-stopped
+      volumes:
+        - ./joal/:/data
+        - /media/ssd/torrents/finished:/data/torrents/
+      ports:
+        - 1234:1234
+      command: ["--joal-conf=/data", "--spring.main.web-environment=true", "--server.port=1234", "--joal.ui.path.prefix=$here_my_secret$", "--joal.ui.secret-token=$Here_My_Token$"]
